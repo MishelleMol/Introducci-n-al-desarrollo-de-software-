@@ -86,3 +86,16 @@ img {
     margin: 12px 0; 
     border-radius: 8px;
 }
+
+.cv-grid {
+    display: grid; 
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.col-izq, 
+.col-der{
+    display: grid; 
+    gap: 24px; 
+}
