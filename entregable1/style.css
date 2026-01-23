@@ -89,8 +89,8 @@ img {
 
 .cv-grid {
     display: grid; 
-    grid-template-columns: 2fr 1fr;
-    gap: 24px;
+    grid-template-columns: 2fr 1fr; /*columnas*/
+    gap: 24px; /*Espacio entre celdas*/
     margin-top: 24px;
 }
 
@@ -99,3 +99,9 @@ img {
     display: grid; 
     gap: 24px; 
 }
+
+/*Desktop por defecto*/
+body {
+    font-size: 18px;
+}
+
