@@ -111,3 +111,10 @@ body {
         font-size: 16px;
     }
 }
+
+/*Móviles pequeños*/
+@media(max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+}
