@@ -1,6 +1,6 @@
 :root{
     --accent: black;
-    --bg: beige; 
+    --bg: #EEF4FB ; 
     --card: #ffffff;
     --text: #111111; 
     --border: #e0e0e0;
@@ -40,6 +40,8 @@ a:hover {
 h1{color: var(--accent);
     font-size: 35.2px; 
     font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: #111111;
     margin-bottom: 0.5rem;
 }
 
