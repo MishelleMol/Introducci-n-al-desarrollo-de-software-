@@ -88,6 +88,13 @@ img {
     margin: 12px 0; 
 }
 
+.btn-cv{
+    font-size: 16px;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.05em;
+}
+
 .cv-grid {
     display: grid; 
     grid-template-columns: 2fr 1fr; /*columnas*/
