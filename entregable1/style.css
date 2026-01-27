@@ -1,0 +1,130 @@
+:root{
+    --accent: black;
+    --bg: #a0b2c6 ; 
+    --card: #ffffff;
+    --text: #111111; 
+    --border: #e0e0e0;
+}
+
+body{
+    background-color: var(--bg);
+    color: var(--text);
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 24px;
+}
+
+section{
+    background-color: var(--card);
+    padding: 1.8rem;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+p, li{color: var(--text);
+font-size: 16px;
+line-height: 1.6;
+}
+
+a{color: var(--accent);
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration:none ;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1{color: var(--accent);
+    font-size: 35.2px; 
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: #111111;
+    margin-bottom: 0.5rem;
+}
+
+h2{
+    color: var(--accent); 
+    font-weight: 600;
+    font-size: 18.4px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+header, nav, footer {
+    padding: 16px 24px;
+}
+
+nav a, footer a {
+    margin-right: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th  { 
+    text-align: left;
+    font-weight: 600;
+    padding-bottom: 8px;
+}
+
+td { 
+    padding: 6px 0;
+}
+
+caption {
+    text-align: left;
+    color: var(--text);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+img {
+    margin: 12px 0; 
+}
+
+.btn-cv{
+    font-size: 16px;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.05em;
+}
+
+.cv-grid {
+    display: grid; 
+    grid-template-columns: 2fr 1fr; /*columnas*/
+    gap: 24px; /*Espacio entre celdas*/
+    margin-top: 24px;
+}
+
+.col-izq, 
+.col-der{
+    display: grid; 
+    gap: 24px; 
+}
+
+/*Desktop por defecto*/
+body {
+    font-size: 18px;
+}
+
+/*Tablet*/
+@media(max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+/*Móviles pequeños*/
+@media(max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/*<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
