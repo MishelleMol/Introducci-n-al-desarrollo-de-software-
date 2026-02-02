@@ -6,6 +6,27 @@
     --border: #e0e0e0;
 }
 
+
+body.oscuro {
+    --accent: #ffffff;
+    --bg: #0f1115;
+    --card: #171a21;
+    --text: #e9ecf1; 
+    --border: #2a2f3a;
+}
+
+body.claro {
+    --accent: #111111;
+    --bg: #FFF1C1;
+    --card: #ffffff; 
+    --text: #111111;
+    --border: #e0e0e0;
+}
+
+body, section {
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
 body{
     background-color: var(--bg);
     color: var(--text);
@@ -87,6 +108,20 @@ caption {
 img {
     margin: 12px 0; 
 }
+
+#resultado{
+    transition: all 0.3s ease; 
+    margin-top: 16px;
+    padding: 16px 20px;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center; 
+    background-color: var(--card);
+    border-radius: 10px;
+    border: 2px solid var(--border);
+    color: var(--accent);
+}
+
 
 .btn-cv{
     font-size: 16px;
