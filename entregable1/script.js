@@ -40,3 +40,8 @@ function toggleExperiencia() {
     const contenido = document.getElementById("experiencia-info"); 
     contenido.classList.toggle("activo");
 }
+
+function toggleInformacion() {
+    const contenido = document.getElementById("contacto-info");
+    contenido.classList.toggle("activo");
+}
