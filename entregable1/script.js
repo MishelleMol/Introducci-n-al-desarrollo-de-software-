@@ -35,3 +35,8 @@ function modoOriginal() {
     document.body.classList.remove("oscuro");
     document.body.classList.remove("claro");
 }
+
+function toggleExperiencia() {
+    const contenido = document.getElementById("experiencia-info"); 
+    contenido.classList.toggle("activo");
+}

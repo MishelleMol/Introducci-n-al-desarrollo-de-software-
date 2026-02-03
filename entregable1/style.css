@@ -122,6 +122,13 @@ img {
     color: var(--accent);
 }
 
+.accordion-content {
+    display: none; 
+}
+
+.accordion-content.activo {
+    display: block; 
+}
 
 .btn-cv{
     font-size: 16px;
