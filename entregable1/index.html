@@ -143,6 +143,18 @@
 
     <section id="programacion">
       <h2> Lenguajes de programacion </h2>
+      
+      <input
+        type="text"
+        id="buscador-habilidades"
+        placeholder: "Buscar habilidades..."
+        oninput="filtrarHabilidades()"
+      >
+
+      <p id="sin-resultados" style="display: none; margin-top: 10px;">
+        No se encontraron habilidades.
+      </p>
+
       <ul>
         <li> HTML intermedio</li>
         <li> Python </li>

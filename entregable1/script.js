@@ -45,3 +45,29 @@ function toggleInformacion() {
     const contenido = document.getElementById("contacto-info");
     contenido.classList.toggle("activo");
 }
+
+
+function filtrarHabilidades() {
+    const input = document.getElementById("buscador-habilidades"); 
+    const filtro = input.value.toLowerCase().trim(); 
+
+    const lista = document.getElementById("lista-habilidades"); 
+    const items = lista.getElementsByTagName("li");
+
+
+    let coincidencias = 0; 
+
+    for (let i = 0; i < items.length; i++) {
+        const texto = items[i].innerText.toLowerCase(); 
+
+        if(texto.includes(filtro)) {
+            items[i].style.display =""; 
+            coincidencias++;
+        } else {
+            items[i].style.display = "none"; 
+        }
+    }
+
+    document.getElementById("sin-resultados").style.display = 
+    coincidencias === 0 ? "block" : "none"; 
+}

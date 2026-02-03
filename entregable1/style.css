@@ -130,6 +130,23 @@ img {
     display: block; 
 }
 
+
+#buscador-habilidades {
+    width: 100%; 
+    padding: 12px 14px; 
+    margin: 10px 0 14px; 
+    border-radius: 8px;
+    border: 1px solid var(--border); 
+    background-color: var(--card);
+    color: var(--text);
+}
+
+#buscador-habilidades::placeholder{
+    color: var(--text);
+    opacity: 0.7; 
+}
+
+
 .btn-cv{
     font-size: 16px;
     font-weight: 900;
