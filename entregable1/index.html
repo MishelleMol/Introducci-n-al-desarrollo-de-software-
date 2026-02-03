@@ -23,6 +23,18 @@
 <main class="cv-grid">
 
   <div class="col-izq">
+    
+    <section id="saludo">
+      <h2>Saludo personalizado</h2>
+
+      <input type="text" id="nombre" placeholder="Escribe tu nombre">
+      <button onclick="saludar()">Saludar</button>
+      <p id="resultado"></p>
+
+      <button onclick="modoOscuro()">Modo nocturno</button>
+      <button onclick="modoClaro()">Modo mañanero</button>
+      <button onclick="modoOriginal()">Modo original</button>
+    </section>
 
     <section id="educación">
       <h2>Educación</h2>
@@ -61,38 +73,46 @@
     </section>
 
     <section id="experiencia">
-      <h2>Experiencia Laboral</h2>
-      <div class="table-responsive">
-        <table class="table table-striped table-bordered align-middle">
-          <caption class="caption-top">
-            Experiencia laboral: periodo, empresa y puesto
-          </caption>
 
-          <thead class="table-light">
-            <tr>
-              <th scope="col">Periodo</th>
-              <th scope="col">Empresa</th>
-              <th scope="col">Puesto</th>
-            </tr>
-          </thead>
+      <button class="accordion-btn" onclick="toggleExperiencia()">
+        Experiencia Laboral 
+      </button> 
 
-          <tbody>
-            <tr>
-              <td>2024-2025</td>
-              <td>The Central America Bottling Corporation</td>
-              <td>Desarrolladora de Software</td>
-            </tr>
-            <tr>
-              <td>2025-Hoy</td>
-              <td>Proyecto Personal CV</td>
-              <td>Desarrolladora Junior</td>
-            </tr>
-          </tbody>
-        </table>
+      <div id="experiencia-info" class="accordion-content">
+
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered align-middle">
+            <caption class="caption-top">
+              Experiencia laboral: periodo, empresa y puesto
+            </caption>
+
+            <thead class="table-light">
+              <tr>
+                <th scope="col">Periodo</th>
+                <th scope="col">Empresa</th>
+                <th scope="col">Puesto</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>2024-2025</td>
+                <td>The Central America Bottling Corporation</td>
+                <td>Desarrolladora de Software</td>
+              </tr>
+              <tr>
+                <td>2025-Hoy</td>
+                <td>Proyecto Personal CV</td>
+                <td>Desarrolladora Junior</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
 
-  </div> 
+  </div>
+  
 
   <div class="col-der">
 
@@ -123,6 +143,18 @@
 
     <section id="programacion">
       <h2> Lenguajes de programacion </h2>
+      
+      <input
+        type="text"
+        id="buscador-habilidades"
+        placeholder: "Buscar habilidades..."
+        oninput="filtrarHabilidades()"
+      >
+
+      <p id="sin-resultados" style="display: none; margin-top: 10px;">
+        No se encontraron habilidades.
+      </p>
+
       <ul>
         <li> HTML intermedio</li>
         <li> Python </li>
@@ -146,14 +178,23 @@
 </main>
 
 <footer>
-  <a href="mailto:mishellemolina@ufm.edu">Correo Profesional</a>
-  <a href="https://github.com/">Github</a>
-  <a href="https://www.linkedin.com/">Perfil Profesional</a>
+  <button class="accordion-btn" onclick="toggleInformacion()">
+    Contáctame
+  </button>
 
-  <button type="button" class="btn btn-light" onclick="window.print()">
+  <div id="contacto-info" class="accordion-content">
+    <a href="mailto:mishellemolina@ufm.edu">Correo Profesional</a>
+    <a href="https://github.com/">Github</a>
+    <a href="https://www.linkedin.com/">Perfil Profesional</a>
+      <button type="button" class="btn btn-light" onclick="window.print()">
     Download PDF
   </button>
+  </div>
+
 </footer>
 
+
+<script src="script.js">
+</script>
 </body>
 </html>
