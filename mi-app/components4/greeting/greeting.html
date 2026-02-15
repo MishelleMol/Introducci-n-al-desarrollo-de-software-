@@ -1,0 +1,24 @@
+<section class="section greeting">
+
+  <div class="kicker">Bienvenida</div>
+  <h2 class="title">Saludo</h2>
+
+  <input
+    class="input"
+    type="text"
+    placeholder="Ingresa tu nombre…"
+    [(ngModel)]="nombre"
+  />
+
+  <button class="btn" (click)="saludar()">Saludar</button>
+
+  <p class="resultado">{{ resultado }}</p>
+
+  <hr />
+
+<div class="themeRow">
+  <button class="tbtn" type="button" (click)="modoOscuro()">Modo oscuro</button>
+  <button class="tbtn" type="button" (click)="modoClaro()">Modo claro</button>
+</div>
+
+</section>

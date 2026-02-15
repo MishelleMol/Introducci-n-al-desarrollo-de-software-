@@ -1,0 +1,37 @@
+<<section class="listsSection" id="lenguajes">
+  <div class="kicker">Idiomas</div>
+  <h2 class="title">Idiomas</h2>
+
+  <ul class="list">
+    <li *ngFor="let idioma of idiomas">{{ idioma }}</li>
+  </ul>
+</section>
+
+<section class="section" id="programacion">
+  <div class="kicker">Skills</div>
+  <h2 class="title">Lenguajes de programación</h2>
+
+  <input
+    class="search"
+    type="text"
+    placeholder="Buscar habilidades..."
+    (input)="filtrarHabilidades($event)"
+  />
+
+  <p *ngIf="sinResultados" class="sin-resultados">
+    No se encontraron habilidades.
+  </p>
+
+  <ul class="list">
+    <li *ngFor="let h of habilidadesFiltradas">{{ h }}</li>
+  </ul>
+</section>
+
+<section class="section" id="clases">
+  <div class="kicker">Universidad</div>
+  <h2 class="title">Clases de la Universidad</h2>
+
+  <ol class="list">
+    <li *ngFor="let c of clases">{{ c }}</li>
+  </ol>
+</section>

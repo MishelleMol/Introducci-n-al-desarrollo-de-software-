@@ -1,0 +1,176 @@
+.hero{
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  min-height: 520px;
+  background: var(--bg);
+}
+
+
+.heroMedia{
+  position: absolute;
+  inset: 0;
+}
+
+.bgVideo{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.95) contrast(0.95);
+}
+
+
+.overlay{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(250,247,242,0.10),
+    rgba(250,247,242,0.88)
+  );
+}
+
+/* top bar */
+.heroTop{
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+}
+
+.logo{
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  opacity: 0.75;
+}
+
+.rightIcons{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.iconBtn{
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.60);
+  border-radius: 999px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  color: var(--text);
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+
+.iconBtn:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.78);
+}
+
+
+.heroContent{
+  position: relative;
+  z-index: 2;
+  padding: 86px 22px 24px;
+  max-width: 760px;
+}
+
+.kicker{
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.nombre{
+  font-size: clamp(36px, 6vw, 66px);
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+
+.tagline{
+  margin: 12px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.ctaRow{
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 10px 14px;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.75);
+  color: var(--text);
+  opacity: 0.9;
+  transition: transform .15s ease, background .15s ease, opacity .15s ease;
+}
+
+.btn:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.90);
+  opacity: 1;
+}
+
+.btn.ghost{
+  background: transparent;
+}
+
+
+:host-context(body.oscuro) .hero{
+  border-color: rgba(255,255,255,0.12);
+}
+
+
+:host-context(body.oscuro) .overlay{
+  background: linear-gradient(
+    to bottom,
+    rgba(10,10,11,0.20),
+    rgba(10,10,11,0.80)
+  );
+}
+
+
+:host-context(body.oscuro) .iconBtn{
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.14);
+  color: rgba(255,255,255,0.92);
+}
+
+:host-context(body.oscuro) .iconBtn:hover{
+  background: rgba(255,255,255,0.12);
+}
+
+
+:host-context(body.oscuro) .btn{
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(255,255,255,0.14);
+  color: rgba(255,255,255,0.92);
+}
+
+:host-context(body.oscuro) .btn:hover{
+  background: rgba(255,255,255,0.16);
+}
+
+:host-context(body.oscuro) .btn.ghost{
+  background: transparent;
+}

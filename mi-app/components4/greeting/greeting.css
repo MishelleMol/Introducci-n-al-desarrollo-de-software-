@@ -1,0 +1,102 @@
+.greeting{
+  text-align: center;
+}
+
+.kicker{
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.title{
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 18px;
+  color: var(--text);
+}
+
+
+.input{
+  width: 100%;
+  max-width: 320px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  outline: none;
+  font-size: 14px;
+  margin: 10px auto 16px auto;
+  display: block;
+  transition: border-color .2s ease, background .2s ease, color .2s ease;
+  background: color-mix(in srgb, var(--surface-strong) 82%, transparent);
+  color: var(--text);
+}
+
+.input:focus{
+  border-color: var(--focus);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--focus) 35%, transparent);
+}
+
+
+.btn{
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface-strong) 86%, transparent);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 14px;
+  margin: 6px;
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+
+.btn:hover{
+  background: color-mix(in srgb, var(--surface-strong) 94%, transparent);
+  transform: translateY(-1px);
+}
+
+.btn:active{
+  transform: translateY(0);
+}
+
+.resultado{
+  font-size: 16px;
+  color: var(--muted);
+  margin: 12px 0;
+}
+
+hr{
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 20px 0;
+}
+
+
+.themeRow{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.tbtn{
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface-strong) 86%, transparent);
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform .15s ease, background .15s ease;
+  font-size: 14px;
+}
+
+.tbtn:hover{
+  transform: translateY(-1px);
+  background: color-mix(in srgb, var(--surface-strong) 94%, transparent);
+}
+
+.tbtn.ghost{
+  background: transparent;
+}

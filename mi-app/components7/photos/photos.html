@@ -1,0 +1,25 @@
+<section class="section" id="logros">
+  <div class="kicker">Mis logros</div>
+  <h2 class="title">Highlights</h2>
+
+  <div class="frame">
+    <button class="nav left" type="button" (click)="prev()">‹</button>
+
+    <img class="img" [src]="slides[i].src" [alt]="slides[i].alt" />
+
+    <button class="nav right" type="button" (click)="next()">›</button>
+  </div>
+
+  <div class="caption" *ngIf="slides[i].caption">
+    {{ slides[i].caption }}
+  </div>
+
+  <div class="dots">
+    <button
+      *ngFor="let s of slides; let idx = index"
+      class="dot"
+      [class.active]="idx === i"
+      (click)="goTo(idx)">
+    </button>
+  </div>
+</section>

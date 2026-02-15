@@ -1,0 +1,18 @@
+
+<footer>
+    <p class="kicker">Contacto</p>
+
+    <button class="accordion-btn" type="button" (click)="toggleInformacion()">
+        Contáctame
+    </button>
+
+    <div class="accordion-content" *ngIf="mostrarInfo">
+        <a href="mailto:mishellemolina@ufm.edu">Correo Profesional</a>
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">Github</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">Perfil Profesional</a>
+
+        <button type="button" class="btn btn-light" (click)="downloadPdf()">
+        Download PDF
+        </button>
+    </div>
+</footer>

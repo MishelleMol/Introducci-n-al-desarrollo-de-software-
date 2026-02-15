@@ -1,0 +1,196 @@
+:root{
+  --bg: #faf7f2;
+  --surface: rgba(255,255,255,.86);
+  --surface-strong: #ffffff;
+
+  --text: #1f1f1f;
+  --muted: rgba(0,0,0,.55);
+  --border: rgba(0,0,0,.10);
+
+  --radius: 22px;
+  --shadow: 0 18px 50px rgba(0,0,0,.08);
+  --shadow-soft: 0 10px 30px rgba(0,0,0,.08);
+
+  --focus: rgba(0,0,0,.18);
+}
+
+/* ========= DARK MODE ========= */
+body.oscuro{
+  --bg: #0b0c0e;
+
+  /* tarjetas/sections */
+  --surface: rgba(20,22,25,.88);
+  --surface-strong: #15181c;          /* <-- clave: ya NO es claro */
+
+  --text: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.64);
+  --border: rgba(255,255,255,.14);
+
+  --shadow: 0 18px 60px rgba(0,0,0,.45);
+  --shadow-soft: 0 10px 35px rgba(0,0,0,.35);
+
+  --focus: rgba(255,255,255,.22);
+}
+
+/* ========= LIGHT MODE (opcional) ========= */
+body.claro{
+  --bg: #ffffff;
+  --surface: rgba(255,255,255,.92);
+  --surface-strong: #ffffff;
+  --text: #1f1f1f;
+  --muted: rgba(0,0,0,.55);
+  --border: rgba(0,0,0,.10);
+}
+
+/* ========= BASE ========= */
+*{ box-sizing: border-box; }
+html, body{ height: 100%; }
+
+body{
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+/* herencia de color */
+h1,h2,h3,h4,p,span,small,li,td,th,label,caption{
+  color: inherit;
+}
+
+/* ========= LAYOUT ========= */
+.page{
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 26px 18px 80px;
+}
+
+.stack{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ========= CARDS / SECTIONS ========= */
+.section{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 26px;
+  backdrop-filter: blur(12px);
+}
+
+/* si usas otras tarjetas */
+.card, .panel, .frame, .videoWrapper{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+}
+
+/* ========= INPUTS ========= */
+input, textarea, select{
+  background: color-mix(in srgb, var(--surface-strong) 82%, transparent);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 14px;
+  outline: none;
+}
+
+input::placeholder, textarea::placeholder{
+  color: var(--muted);
+}
+
+input:focus, textarea:focus, select:focus{
+  border-color: var(--focus);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--focus) 35%, transparent);
+}
+
+/* ========= BUTTONS ========= */
+button{
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface-strong) 86%, transparent);
+  color: var(--text);
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: transform .15s ease, background .15s ease, border-color .15s ease, color .15s ease;
+}
+
+button:hover{
+  transform: translateY(-1px);
+  background: color-mix(in srgb, var(--surface-strong) 94%, transparent);
+}
+
+button:active{
+  transform: translateY(0);
+}
+
+/* ========= TABLES ========= */
+table{
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+th, td{
+  border-bottom: 1px solid var(--border);
+  padding: 14px 16px;
+  color: var(--text);
+}
+
+thead th{
+  background: color-mix(in srgb, var(--surface-strong) 72%, transparent);
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+tbody tr:nth-child(odd){
+  background: color-mix(in srgb, var(--surface-strong) 58%, transparent);
+}
+
+body.oscuro tbody tr:nth-child(odd){
+  background: rgba(255,255,255,.04);
+}
+
+/* captions más visibles */
+caption{
+  color: var(--muted);
+}
+
+/* ========= “ANTI-WHITE BOX” FIXES ========= */
+/* Si algún elemento (o librería) intenta pintar blanco, lo forzamos a variables */
+body.oscuro .table,
+body.oscuro .table *{
+  background: transparent !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+/* iframes (youtube) con borde consistente */
+iframe{
+  border: 0;
+  background: transparent;
+}
+
+/* ========= LINKS ========= */
+a{
+  color: inherit;
+  text-decoration: none;
+}
+a:hover{ opacity: .9; }
+
+/* ========= HR ========= */
+hr{
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 18px 0;
+}
