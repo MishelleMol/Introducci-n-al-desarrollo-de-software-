@@ -1,0 +1,71 @@
+
+.listsSection{
+  margin-top: 20px;
+  padding: 26px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  color: var(--text);
+}
+
+.kicker{
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.title{
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+
+.search{
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  outline: none;
+  font-size: 14px;
+  margin-bottom: 16px;
+  transition: border-color .2s ease, background .2s ease, color .2s ease;
+  background: color-mix(in srgb, var(--surface-strong) 82%, transparent);
+  color: var(--text);
+}
+
+.search::placeholder{
+  color: var(--muted);
+}
+
+.search:focus{
+  border-color: var(--focus);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--focus) 35%, transparent);
+}
+
+
+.list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li{
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 15px;
+  color: var(--text);
+}
+
+.list li:last-child{
+  border-bottom: none;
+}
+
+.sin-resultados{
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
