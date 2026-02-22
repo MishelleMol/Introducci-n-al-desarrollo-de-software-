@@ -1,13 +1,13 @@
-import { Routes } from '@angular/router';
-import { Cv } from './cv/cv';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
 import { About } from './about/about';
 import { Skills } from './skills/skills';
 import { Experience } from './experience/experience';
 import { Jobs } from './experience/jobs/jobs';
 import { Studies } from './experience/studies/studies';
 
-export const routes: Routes = [
-  { path: '', component: Cv },              // <- tu CV igual que antes
+const routes: Routes = [
   { path: 'about', component: About },
   { path: 'skills', component: Skills },
   {
@@ -20,3 +20,9 @@ export const routes: Routes = [
     ]
   }
 ];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
