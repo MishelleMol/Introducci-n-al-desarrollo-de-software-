@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-experience',
   standalone: true,
   imports: [RouterOutlet, RouterLink],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  templateUrl: './experience.html',
+  styleUrl: './experience.css'
 })
-export class App {}
+export class Experience {}

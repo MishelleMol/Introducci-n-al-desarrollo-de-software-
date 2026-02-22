@@ -1,15 +1,8 @@
-<div class="page">
+<nav style="padding: 12px;">
+  <a routerLink="/">CV</a> |
+  <a routerLink="/about">About</a> |
+  <a routerLink="/skills">Skills</a> |
+  <a routerLink="/experience">Experience</a>
+</nav>
 
-  <app-header></app-header>
-
-  <main class="stack">
-    <app-greeting></app-greeting>
-    <app-photos></app-photos>
-    <app-lists></app-lists>
-    <app-video></app-video>
-    <app-tables></app-tables>
-  </main>
-
-  <app-footer></app-footer>
-
-</div>
+<router-outlet></router-outlet>
