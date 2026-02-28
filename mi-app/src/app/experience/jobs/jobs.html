@@ -1,4 +1,4 @@
 <h3>Jobs</h3>
 <ul>
-  <li *ngFor="let j of jobs">{{ j }}</li>
+  <li *ngFor="let j of jobs">{{ j | truncate:10 }}</li>
 </ul>
