@@ -9,6 +9,7 @@ export interface GithubRepo {
   stargazers_count: number;
   fork: boolean;
   updated_at: string;
+  language: string | null;
 }
 
 @Injectable({
@@ -16,7 +17,7 @@ export interface GithubRepo {
 })
 export class GithubService {
   private http = inject(HttpClient);
-  private apiUrl = 'https://api.github.com/users/MishelleMol/repos?sort=updated';
+  private apiUrl = 'https://api.github.com/users/MishelleMol/repos?sort=updated&per_page=10';
 
   getRepos(): Observable<GithubRepo[]> {
     return this.http.get<GithubRepo[]>(this.apiUrl);

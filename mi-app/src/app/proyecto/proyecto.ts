@@ -12,6 +12,7 @@ import { GithubService, GithubRepo } from '../service/github';
 export class Proyecto implements OnInit {
   repos: GithubRepo[] = [];
   errorMensaje = '';
+  cargando = true;
 
   private githubService = inject(GithubService);
 
@@ -21,9 +22,13 @@ export class Proyecto implements OnInit {
         this.repos = data
           .filter(repo => !repo.fork)
           .slice(0, 3);
+
+        this.cargando = false;
       },
-      error: () => {
+      error: (err) => {
+        console.error('Error al obtener repositorios:', err);
         this.errorMensaje = 'No se pudieron cargar los proyectos.';
+        this.cargando = false;
       }
     });
   }
