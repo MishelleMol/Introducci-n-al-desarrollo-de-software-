@@ -1,0 +1,20 @@
+<section class="proyectos">
+  <h2>Mis Proyectos</h2>
+
+  <p *ngIf="errorMensaje">{{ errorMensaje }}</p>
+
+  <div class="lista-proyectos" *ngIf="repos.length > 0; else cargando">
+    <div class="card" *ngFor="let repo of repos">
+      <h3>{{ repo.name }}</h3>
+      <p>{{ repo.description || 'Sin descripción disponible.' }}</p>
+      <p><strong>Estrellas:</strong> {{ repo.stargazers_count }}</p>
+      <a [href]="repo.html_url" target="_blank" rel="noopener noreferrer">
+        Ver repositorio
+      </a>
+    </div>
+  </div>
+
+  <ng-template #cargando>
+    <p *ngIf="!errorMensaje">Cargando proyectos...</p>
+  </ng-template>
+</section>
