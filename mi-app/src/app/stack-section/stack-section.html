@@ -1,0 +1,21 @@
+<section class="stack-section">
+  <h2>Temas actuales en tecnología</h2>
+
+  <p *ngIf="cargando">Cargando temas...</p>
+  <p *ngIf="errorMensaje">{{ errorMensaje }}</p>
+
+  <div class="lista-preguntas" *ngIf="!cargando && questions.length > 0">
+    <div class="card" *ngFor="let question of questions">
+      <h3>{{ question.title }}</h3>
+      <p><strong>Autor:</strong> {{ question.author }}</p>
+      <a
+        *ngIf="question.url"
+        [href]="question.url"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Ver artículo
+      </a>
+    </div>
+  </div>
+</section>

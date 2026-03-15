@@ -5,11 +5,13 @@ import { Skills } from './skills/skills';
 import { Experience } from './experience/experience';
 import { Jobs } from './experience/jobs/jobs';
 import { Studies } from './experience/studies/studies';
+import { Proyecto } from './proyecto/proyecto';
 
 export const routes: Routes = [
-  { path: '', component: Cv },              // <- tu CV igual que antes
+  { path: '', component: Cv },              
   { path: 'about', component: About },
   { path: 'skills', component: Skills },
+  { path: "proyectos", component: Proyecto}, 
   {
     path: 'experience',
     component: Experience,
@@ -20,3 +22,5 @@ export const routes: Routes = [
     ]
   }
 ];
+
+
