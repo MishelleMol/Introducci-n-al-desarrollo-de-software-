@@ -4,11 +4,11 @@ const cors = require('cors');
 const app = express();
 const PORT = 3001;
 
-// Middlewares
+
 app.use(cors());
 app.use(express.json());
 
-// Base de datos en memoria
+
 let projects = [
   { id: 1, name: 'Mi App Angular', stars: 5 },
   { id: 2, name: 'Mi API Express', stars: 8 },
@@ -17,17 +17,17 @@ let projects = [
 
 let nextId = 4;
 
-// GET / - Bienvenida
+
 app.get('/', (req, res) => {
   res.json({ message: 'Bienvenido a la API de Proyectos' });
 });
 
-// GET /projects - Ver todos los proyectos
+
 app.get('/projects', (req, res) => {
   res.json(projects);
 });
 
-// GET /projects/:id - Ver un proyecto específico
+
 app.get('/projects/:id', (req, res) => {
   const project = projects.find(p => p.id === parseInt(req.params.id));
 
@@ -38,7 +38,7 @@ app.get('/projects/:id', (req, res) => {
   res.json(project);
 });
 
-// POST /projects - Crear un proyecto
+
 app.post('/projects', (req, res) => {
   const { name, stars } = req.body;
 
@@ -56,7 +56,7 @@ app.post('/projects', (req, res) => {
   res.status(201).json(newProject);
 });
 
-// PATCH /projects/:id - Actualizar un proyecto
+
 app.patch('/projects/:id', (req, res) => {
   const index = projects.findIndex(p => p.id === parseInt(req.params.id));
 
@@ -68,7 +68,7 @@ app.patch('/projects/:id', (req, res) => {
   res.json(projects[index]);
 });
 
-// DELETE /projects/:id - Eliminar un proyecto
+
 app.delete('/projects/:id', (req, res) => {
   const index = projects.findIndex(p => p.id === parseInt(req.params.id));
 
